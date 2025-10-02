@@ -4,6 +4,7 @@ import java.util.LinkedList;
 
 import java.lang.UnsupportedOperationException;
 import java.lang.NullPointerException;
+import java.lang.Math.*;
 
 public class TablasHash {
   private LinkedList<Integer> tabla[];
@@ -68,7 +69,7 @@ public class TablasHash {
 
   private int hashFunction(int k) throws Exception{
     
-    return k % this.size;
+    return Math.abs(k % this.size);
 
   }
 }
